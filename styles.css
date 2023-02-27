@@ -1,9 +1,40 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    background-color: green;
+.container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 120px 1fr 1fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main"
+        "sidebar main";
+    height: 100vh;
+}
+
+.container div {
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
     color: white;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: blue;
+}
+
+.header {
+    grid-area: header;
+    background-color: red;
+}
+
+.main {
+    grid-area: main;
+    background-color: green;
 }
