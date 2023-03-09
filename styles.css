@@ -248,3 +248,49 @@
 .main .trending {
     grid-area: trending;
 }
+
+.trending h5 {
+    padding-bottom: 8px;
+}
+
+.trend-card {
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 1px 5px gray;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.trend-profile {
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "t-profile-pic t-profile-handle"
+        "t-profile-pic t-profile-desc";
+    row-gap: 2px;
+}
+
+.t-profile-pic {
+    grid-area: t-profile-pic;
+    --pic-dim: 35px;
+    width: var(--pic-dim);
+    height: var(--pic-dim);
+    border-radius: 30px;
+}
+
+.t-profile-handle {
+    grid-area: t-profile-handle;
+    color: black;
+    font-size: 1rem;
+}
+
+.t-profile-desc {
+    grid-area: t-profile-desc;
+    color: gray;
+    font-size: 0.75rem;
+}
