@@ -14,7 +14,8 @@
         "sidebar header"
         "sidebar main"
         "sidebar main";
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }
 
 .container div {
@@ -190,6 +191,60 @@
 }
 
 .main {
+    padding-top: 16px;
     grid-area: main;
-    background-color: lightgreen;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 0.75fr 0.25fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "projects announcements"
+        "projects trending";
+}
+
+.main .projects {
+    grid-area: projects;
+}
+
+.main .announcements {
+    grid-area: announcements;
+}
+
+.announcements h5 {
+    padding-bottom: 8px;
+}
+
+.announce-card {
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 1px 5px gray;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.announce-msg:not(:last-child) {
+    padding-bottom: 16px;
+    border-bottom: 1px solid lightgray;
+}
+
+.announce-msg h6 {
+    color: black;
+    padding-bottom: 4px;
+}
+
+.announce-msg p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    color: gray;
+    font-size: 0.75rem;
+}
+
+.main .trending {
+    grid-area: trending;
 }
