@@ -191,23 +191,63 @@
 }
 
 .main {
-    padding-top: 16px;
+    padding-top: 24px;
     grid-area: main;
     background-color: lightgray;
     display: grid;
     grid-template-columns: 0.75fr 0.25fr;
-    grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "projects announcements"
-        "projects trending";
+        "projects announce-trend"
 }
 
-.main .projects {
+.projects {
     grid-area: projects;
+    margin: 0px 20px;
 }
 
-.main .announcements {
-    grid-area: announcements;
+.projects h5 {
+    padding-bottom: 8px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    padding-bottom: 16px;
+}
+
+.project-card {
+    background-color: white;
+    box-shadow: 2px 2px 2px gray;
+    border-left: 8px solid gold;
+    border-radius: 5px;
+    min-height: 200px;
+    padding: 18px 12px 12px;
+}
+
+.project-title {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.project-desc {
+    height: 70%;
+    line-height: 1rem;
+    color: gray;
+    font-size: 0.75rem;
+}
+
+.project-action-btns {
+    text-align: end;
+}
+
+.project-action-btns > * {
+    color: gray;
+}
+
+.announce-trend {
+    grid-area: announce-trend;
 }
 
 .announcements h5 {
@@ -217,7 +257,7 @@
 .announce-card {
     width: 90%;
     background-color: white;
-    box-shadow: 0px 1px 5px gray;
+    box-shadow: 2px 2px 2px gray;
     padding: 20px;
     margin-bottom: 24px;
     border-radius: 8px;
@@ -245,10 +285,6 @@
     font-size: 0.75rem;
 }
 
-.main .trending {
-    grid-area: trending;
-}
-
 .trending h5 {
     padding-bottom: 8px;
 }
@@ -256,7 +292,7 @@
 .trend-card {
     width: 90%;
     background-color: white;
-    box-shadow: 0px 1px 5px gray;
+    box-shadow: 2px 2px 2px gray;
     padding: 20px;
     margin-bottom: 24px;
     border-radius: 8px;
